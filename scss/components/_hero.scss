@@ -1,0 +1,59 @@
+.hero {
+    background-color: $color-dark;
+    padding: 200px 0;
+
+    &__overlay {
+        max-width: 1600px;
+        height: 600px;
+        margin: 0 auto;
+        background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                        url(../images/bg-img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &__container {
+        align-items: center;
+    }
+    
+    &__title {
+        font-size: 44px;
+        text-transform: uppercase;
+        line-height: 1.3;
+        letter-spacing: 0.06em;
+        color: $color-inversion;
+    
+        max-width: 696px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.9;
+        letter-spacing: 0.06em;
+        font-family: inherit;
+        cursor: pointer;
+        color: $color-inversion;
+        background-color: $color-accent;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 10px 32px;
+        border: 0;
+        border-radius: 4px;
+        @include transition(background-color);
+
+        &:hover, &:focus {
+              background-color: $color-active;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,46 @@
+.contacts {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.2;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        color: $color-primary;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 0;
+
+        @include transition(color);
+
+            &:hover, &:focus {
+                color: $color-accent;
+                fill: $color-accent;
+            }
+    }
+
+    &__icon {
+        fill: currentColor;
+        margin-right: 10px;
+
+       @include transition(fill);
+    }
+}
+
+
+
+
+
+
+
