@@ -3,10 +3,22 @@
 
     &__list {
         @extend %list;
-        display: flex;
-        gap: 30px;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            gap: 30px;
+            flex-wrap: nowrap;
+        }
+            
     }
-    
     
     &__item {
         background-color: $color-inversion;
@@ -14,12 +26,31 @@
                     0px 1px 1px rgba(0, 0, 0, 0.14),
                     0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
+        margin-bottom: 30px;
+        width: 450px;
+        height: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
         }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 354px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+    }
 }
 
 .member {
-    padding: 30px 0;
+    padding: 30px 0 24px 0;
     border: 1px solid transparent;
+
+    @media screen and (min-width: 1200px) {
+        padding: 30px 0;
+    }
 
     &__title {
             font-size: 16px;
@@ -63,7 +94,8 @@
             align-items: center;
             background-color: $color-inversion;
             color: $color-link;
-            @include transition(color, background-color);
+            @include transition(color);
+            @include transition(background-color);
 
                 &:hover, &:focus {
                     background-color: $color-accent;

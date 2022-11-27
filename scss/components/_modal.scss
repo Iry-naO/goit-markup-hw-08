@@ -6,7 +6,8 @@
     height: 100%;
     z-index: 1;
     opacity: 1;
-    @include transition(opacity, visibility);
+    @include transition(opacity);
+    @include transition(visibility);
     background-color: $color-backdrop;
 }
 
@@ -18,7 +19,7 @@
 
 .modal {
     padding: 40px;
-    width: 528px;
+    width: 450px;
     background-color: $color-inversion;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
                 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -30,6 +31,10 @@
     top: 50%;
     transform: translate(-50%, -50%) scaleX(1);
     @include transition(transform);
+
+    @media screen and (min-width: 1200px) {
+         width: 528px;
+    }
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scaleX(0.5);

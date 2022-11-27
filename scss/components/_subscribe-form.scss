@@ -1,28 +1,34 @@
 .subscribe {
     &__title {
         display: block;
-        margin: 0;
-        margin-bottom: 20px;
+        margin: 0 auto 20px auto;
         font-size: 14px;
         font-weight: 700;
         line-height: 1.172;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        text-align: center;
         color: $color-inversion;
         cursor: pointer;
+
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
     }
 
     &__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin: 0;
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__input {
-        width: 358px;
+        width: 100%;
         height: 50px;
-        margin: 0 12px 0 0;
+        margin: 0 auto 20px auto;
         padding: 15px 16px;
         border: 1px solid $color-border;
         border-radius: 4px;
@@ -39,6 +45,16 @@
             letter-spacing: 0.03em;
             color: $color-email;
         }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            width: 450px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+            margin: 0 12px 0 0;
+        }
     }
 
     &__button {
@@ -47,7 +63,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-        padding: 10px;
+        padding: 10px 28px;
         margin: 0 auto;
         background-color: $color-accent;
         color: $color-inversion;

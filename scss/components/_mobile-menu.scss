@@ -1,3 +1,149 @@
 .mobile-menu {
     display: none;
+    position: absolute;
+    pointer-events: none;
+    padding: 48px 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $color-inversion;
+              
+}
+
+.js-menu-container.is-open {
+    display: block;
+}
+
+.mobile-menu__button-open {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    fill: $color-head;
+
+    @include transition(fill);
+
+    &:hover, &:focus {
+        fill: $color-accent;
+    }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+}
+
+.mobile-menu__button-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    fill: $color-head;
+
+    @include transition(fill);
+
+    &:hover, &:focus {
+        fill: $color-accent;
+    }
+}
+
+.mobile-menu__nav {
+    @extend %list;
+    display: block;
+}
+
+.mobile-menu__nav-item {
+    display: block;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 306px;
+    }
+}
+
+.mobile-menu__nav-link {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: $color-head;
+    display: block;
+    cursor: pointer;
+    @include transition(color);
+
+    &:hover, &:focus {
+         color: $color-accent;
+    }
+}
+
+.mobile-menu__contacts {
+    @extend %list;
+    display: block;
+}
+
+.mobile-menu__contacts-item {
+    display: block;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 64px;
+    }
+}
+
+.mobile-menu__tel {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: $color-accent;
+    cursor: pointer;
+}
+
+.mobile-menu__email {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: $color-primary;
+    cursor: pointer;
+}
+
+.mobile-menu__socials {
+    @extend %list;
+    display: flex;
+}
+
+.mobile-menu__socials-item {
+    display: block;
+    padding: 0 10px;
+    border-right: 1px solid $color-input;
+
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+        border-right: none;
+    }
+}
+
+.mobile-menu__socials-link {
+    font-size: 18pxpx;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: $color-accent;
+    cursor: pointer;
 }

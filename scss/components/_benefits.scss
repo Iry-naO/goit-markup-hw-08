@@ -1,39 +1,75 @@
 .benefits {
     @extend %list;
-    display: flex;
-    gap: 30px;
+    display: block;
+    margin: 0 auto;
 
-        &__item {
-            width: 270px;
-        }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
     
-        &__wrapper {
-            width: 270px;
-            height: 120px;
-            background-color: $color-team;
-            margin-bottom: 30px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        &__title {
-            font-size: 14px;
-            line-height: 1.2;
-            letter-spacing: 0.03em;
-            text-align: left;
-            text-transform: uppercase;
-            color: $color-head;
-            margin-bottom: 10px;
+    &__item {
+        width: 100%;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
         }
 
-        &__text {
-            font-size: 14px;
-            line-height: 1.7;
-            text-align: left;
-            letter-spacing: 0.03em;
-            color: $color-primary;
-            margin: 0 auto;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 345px;
         }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+    }
+
+    &__wrapper {
+        width: 450px;
+        height: 120px;
+        background-color: $color-team;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+                width: 345px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+    }
+    
+    &__title {
+        font-size: 14px;
+        line-height: 1.15;
+        letter-spacing: 0.03em;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-head;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+        letter-spacing: 0.03em;
+        color: $color-primary;
+        margin: 0 auto;
+    }
 }
