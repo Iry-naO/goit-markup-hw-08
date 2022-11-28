@@ -115,11 +115,15 @@
 
     &__text {
         margin: 0;
-        font-size: 12px;
+        font-size: 7px;
         font-weight: 400;
         line-height: 1.7;
         letter-spacing: 0.03em;
         color: $color-primary;
+
+        @media screen and (min-width: 480px) {
+            font-size: 12px;
+        }
 
         @media screen and (min-width: 1200px) {
             font-size: 14px;
