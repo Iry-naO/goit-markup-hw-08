@@ -130,27 +130,30 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="product__list">
             <li class="product__item">
-              <img
-                src="./images/img1.jpg"
-                alt="Руки людини лежать на клавіатурі,перед людиною ввімкнений планшет та комп'ютер."
-                width="370"
-              />
+              <picture>
+                <source srcset="./images/img1.jpg 1x, ./images/img-1-2x.jpg 2x">
+                   <img src="./images/img1.jpg" alt="Руки людини лежать на клавіатурі,перед людиною ввімкнений планшет та комп'ютер." />
+              </picture>
+              
               <div class="product__wrapper">
                 <p class="product__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="product__item">
-              <img
-                src="./images/img2.jpg"
-                alt="Людина працює за комп'ютером, в лівій руці тримає смартфон."
-                width="370"
-              />
+              <picture>
+                <source srcset="./images/img2.jpg 1x, ./images/img-2-2x.jpg 2x">
+                <img src="./images/img2.jpg" 
+                     alt="Людина працює за комп'ютером, в лівій руці тримає смартфон." />
+              </picture>
               <div class="product__wrapper">
                 <p class="product__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="product__item">
-              <img src="./images/img3.jpg" alt="Людина тримає в руках планшет." width="370" />
+              <picture>
+                <source srcset="./images/img3.jpg 1x, ./images/img-3-2x.jpg 2x">
+                <img src="./images/img3.jpg" alt="Людина працює за комп'ютером, в лівій руці тримає смартфон." />
+              </picture>
               <div class="product__wrapper">
                 <p class="product__text">Дизайнерські рішення</p>
               </div>
@@ -164,13 +167,10 @@
           <ul class="team__list">
             <li class="team__item">
               <picture>
-                <source media="max-width: 767px" srcset="./images/portrait1-1xmob.jpg 1x,
-                                       ./images/portrait1-2xmob.jpg 2x" />
-                <source media="max-width: 1199px" srcset="./images/portrait1-1xtab.jpg 1x,
-                                      ./images/portrait1-2xtab.jpg 2x" />
-                <source media="min-width: 1200px" srcset="./images/portrait1-1xdesk.jpg 1x,
-                                      ./images/portrait1-2xdesk.jpg 2x" />
-                <img src="./images/portrait1-2xmob.jpg" alt="Усміхнений бородатий чоловік брюнет в окулярах та коричневій сорочці."/>
+                <source srcset="./images/portrait1-1xdesk.jpg 1x, ./images/portrait1-2xdesk.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/portrait1-1xtab.jpg 1x, ./images/portrait1-2xtab.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/portrait1-1xmob.jpg 1x, ./images/portrait1-2xmob.jpg 2x" >
+                <img src="./images/portrait1-1xmob.jpg" alt="Усміхнений бородатий чоловік брюнет в окулярах та коричневій сорочці."/>
               </picture>
               
               <div class="member">
@@ -210,14 +210,11 @@
             </li>
             <li class="team__item">
               <picture>
-                <source media="max-width: 767px" srcset="./images/portrait2-1xmob.jpg 1x,
-                                                     ./images/portrait2-2xmob.jpg 2x" />
-                <source media="max-width: 1199px" srcset="./images/portrait2-1xtab.jpg 1x,
-                                                    ./images/portrait2-2xtab.jpg 2x" />
-                <source media="min-width: 1200px" srcset="./images/portrait2-1xdesk.jpg 1x,
-                                                    ./images/portrait2-2xdesk.jpg 2x" />
-              <img
-                src="./images/portrait2-2xmob.jpg"
+                <source srcset="./images/portrait2-1xdesk.jpg 1x, ./images/portrait2-2xdesk.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/portrait2-1xtab.jpg 1x, ./images/portrait2-2xtab.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/portrait2-1xmob.jpg 1x, ./images/portrait2-2xmob.jpg 2x" />
+                <img
+                src="./images/portrait2-1xmob.jpg"
                 alt="Усміхнена жінка блондинка в окулярах та чорному піджаку."
               />
               </picture>
@@ -258,13 +255,11 @@
             </li>
             <li class="team__item">
               <picture>
-              <source media="max-width: 767px" srcset="./images/portrait3-1xmob.jpg 1x,
-                                                                   ./images/portrait3-2xmob.jpg 2x" />
-              <source media="max-width: 1199px" srcset="./images/portrait3-1xtab.jpg 1x,
-                                                                  ./images/portrait3-2xtab.jpg 2x" />
-              <source media="min-width: 1200px" srcset="./images/portrait3-1xdesk.jpg 1x,
-                                                                  ./images/portrait3-2xdesk.jpg 2x" />
-              <img src="./images/portrait3-2xmob.jpg" alt="Усміхнений чоловік шатен у блакитній сорочці."/></picture>
+                <source srcset="./images/portrait3-1xdesk.jpg 1x, ./images/portrait3-2xdesk.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/portrait3-1xtab.jpg 1x,./images/portrait3-2xtab.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/portrait3-1xmob.jpg 1x, ./images/portrait3-2xmob.jpg 2x" />
+              <img src="./images/portrait3-1xmob.jpg" alt="Усміхнений чоловік шатен у блакитній сорочці."/>
+             </picture>
               <div class="member">
                 <h3 class="member__title">Микола Тарасов</h3>
                 <p lang="en" class="member__text">Marketing</p>
@@ -302,14 +297,11 @@
             </li>
             <li class="team__item">
               <picture>
-                <source media="max-width: 767px" srcset="./images/portrait4-1xmob.jpg 1x,
-                                                         ./images/portrait4-2xmob.jpg 2x" />
-              <source media="max-width: 1199px" srcset=" ./images/portrait4-1xtab.jpg 1x,
-                                                        ./images/portrait4-2xtab.jpg 2x" />
-              <source media="min-width: 1200px" srcset="./images/portrait4-1xdesk.jpg 1x,
-                                                        ./images/portrait4-2xdesk.jpg 2x" />
-                <img 
-                src="./images/portrait4-2xmob.jpg" 
+                <source srcset="./images/portrait4-1xdesk.jpg 1x, ./images/portrait4-2xdesk.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/portrait4-1xtab.jpg 1x, ./images/portrait4-2xtab.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/portrait4-1xmob.jpg 1x, ./images/portrait4-2xmob.jpg 2x" />
+              <img 
+                src="./images/portrait4-1xmob.jpg" 
                 alt="Усміхнений бородатий чоловік брюнет в окулярах та чорній футболці."
                  />
               </picture>
